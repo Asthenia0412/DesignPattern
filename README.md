@@ -53,40 +53,24 @@
 ### 策略模式+桥接模式
 
 - **流程图分析**：
-
   - 数据结构定义了订单类型（`orderType`）、支付方式（`paymentMethod`）和订单金额（`amount`）。
 - **具体代码讲解**：
-
   - 代码结合了策略模式和桥接模式，使用Spring Boot构建RESTful API，以处理电商业务的支付和订单流程。
-
 - **设计结构摘要**：
-
   - 策略模式
-
-    ：
-
     - `PaymentStrategy`接口定义了支付策略的通用方法。
     - 具体支付策略类（`AlipayPayment`, `CreditCardPayment`, `WeChatPayment`）实现了不同的支付方式。
-
   - 桥接模式
-
-    ：
-
     - `OrderProcessor`接口定义了订单处理的通用方法。
     - 具体订单处理类（`OnlineOrderProcessor`, `OfflineOrderProcessor`）根据订单类型进行处理，并与支付策略解耦。
-
   - **桥接模式应用**：订单处理实现与支付方式实现分离，使得两者可以独立扩展。
-
 - **代码实现摘要**：
-
   - Maven依赖配置了Spring Boot相关依赖。
   - 支付策略接口和具体实现定义了支付行为。
   - 订单处理接口和具体实现定义了订单处理行为，并通过`setPaymentStrategy`方法与支付策略解耦。
   - `OrderService`服务类使用桥接模式将支付策略注入到订单处理器中，并处理订单。
   - `RequestController`控制器类接收HTTP请求并处理订单请求。
-
 - **测试流程摘要**：
-
   - 提供了通过Postman或cURL进行RESTful API测试的请求示例，包括创建不同类型和支付方式的订单。
 
 ### 观察者模式
