@@ -98,17 +98,27 @@
 ### **命令模式**
 
 1. **流程图分析**：
+
    - 用户请求通过Controller层进行分发，根据不同的操作（发布笔记、点赞、评论）调用相应的服务和命令，最终返回响应给用户。
+
 2. **代码结构图**：
+
    - 未提供，但根据代码分析可以推断出结构图包含以下几个部分：Controller层、Command接口、具体的Command实现类、Request和Response的POJO类。
+
 3. **请求Json**：
+
    - 定义了三个不同的API请求体，分别对应发布笔记、点赞和评论的操作。
+
 4. **代码分析**：
-   1.1 **POJO设计**：
+
+   A.**POJO设计**：
+
     - **评论模块**：`CommentRequest`和`CommentResponse`类分别用于封装评论请求和响应。
     - **点赞模块**：`LikeRequest`和`LikeResponse`类分别用于封装点赞请求和响应。
     - **发帖模块**：`PublishNoteRequest`和`PublishNoteResponse`类分别用于封装发布笔记请求和响应。
-      1.2 **Service逻辑**：
+
+   B.**Service逻辑**：
+
     - **抽象接口**：`Command`接口定义了`execute`方法，用于执行具体的命令逻辑。
     - **评论模块**：`CommentCommand`类实现了`Command`接口，执行评论操作。
     - **点赞模块**：`LikeCommand`类实现了`Command`接口，执行点赞操作。
@@ -116,7 +126,9 @@
     - **整合模块**：`CommandService`类整合了不同的命令，提供了执行命令的方法。
       1.3 **Controller**：
     - `NoteController`类作为RESTful API的入口，接收HTTP请求并调用相应的命令服务。
+
 5. **设计模式摘要**：
+
    - **命令模式**（Command Pattern）：通过将请求封装成对象，允许用户对请求进行参数化、排队或记录，以及支持可撤销的操作。在这个例子中，每个操作（发布笔记、点赞、评论）都被封装成一个命令对象，实现了`Command`接口，并在`CommandService`中被执行。这样的设计使得请求的发送者和接收者解耦，提高了代码的灵活性和可扩展性。
 
 ## 2024/11/23
