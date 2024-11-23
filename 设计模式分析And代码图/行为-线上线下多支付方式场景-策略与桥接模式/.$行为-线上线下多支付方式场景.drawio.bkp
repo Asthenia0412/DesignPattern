@@ -1,0 +1,16 @@
+<mxfile host="Electron" modified="2024-11-21T15:07:31.423Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="MuBTtUB0jhFDUOHEnkZC" version="24.6.4" type="device">
+  <diagram name="第 1 页" id="DHe4XS_Uou6jMMC9mmh6">
+    <mxGraphModel dx="3088" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="81FnYb8p8mPg7W0-Cjsu-1" value="业务需求：&lt;div&gt;1.用户可选择线上支付(Online)和线下支付(Offline)&lt;/div&gt;&lt;div&gt;2.无论选择何种支付渠道,都只能通过微信(wechat),支付宝(Alipay),信用卡(credit_Card)支付&lt;/div&gt;&lt;div&gt;传统If-else的问题：&lt;/div&gt;&lt;div&gt;1.维护困难,如果线上支付要添加苹果支付,Visa卡的支付途径,那线下支付的代码也得增加.产生了代码的冗余&lt;/div&gt;&lt;div&gt;2.If-Else的耦合过强,我们希望将其拆分成若干个接口+实现类,通过Spring提供的依赖注入来灵活的调用,实现解耦合&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-1150" width="410" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="81FnYb8p8mPg7W0-Cjsu-2" value="1.桥接模式的实现：&lt;div&gt;线上支付与三种具体支付渠道桥接&lt;/div&gt;&lt;div&gt;线下支付与三种具体支付渠道桥接&lt;/div&gt;&lt;div&gt;2.策略模式的实现：&lt;/div&gt;&lt;div&gt;根据前端的Restful请求的参数,确定导向哪一个策略实现类,执行具体逻辑&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;" vertex="1" parent="1">
+          <mxGeometry x="-740" width="400" height="140" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

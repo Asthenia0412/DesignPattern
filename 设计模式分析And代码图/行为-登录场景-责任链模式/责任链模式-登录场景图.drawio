@@ -1,0 +1,70 @@
+<mxfile host="Electron" modified="2024-11-21T12:36:53.904Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="6ZuFZqPAGFc5IoDQEPmf" version="24.6.4" type="device">
+  <diagram name="第 1 页" id="OEm-xwn494MzhzwybAU0">
+    <mxGraphModel dx="2261" dy="836" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cDQWvAKaizP4YNDI834v-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cDQWvAKaizP4YNDI834v-1" target="cDQWvAKaizP4YNDI834v-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cDQWvAKaizP4YNDI834v-1" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Controller&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="110" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cDQWvAKaizP4YNDI834v-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cDQWvAKaizP4YNDI834v-2" target="cDQWvAKaizP4YNDI834v-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cDQWvAKaizP4YNDI834v-2" value="&lt;div&gt;RequestProcessor&lt;/div&gt;&lt;div&gt;(本质是一个Service)&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="497.5" y="360" width="135" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cDQWvAKaizP4YNDI834v-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cDQWvAKaizP4YNDI834v-3" target="cDQWvAKaizP4YNDI834v-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cDQWvAKaizP4YNDI834v-3" value="具体业务Service&lt;div&gt;(譬如博客/员工/管理&lt;span style=&quot;background-color: initial;&quot;&gt;)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="495" y="480" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cDQWvAKaizP4YNDI834v-4" value="" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;" vertex="1" parent="1">
+          <mxGeometry x="10" y="350" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="cDQWvAKaizP4YNDI834v-5" value="前端的发来的Restful风格请求" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#666666;fillColor=#f5f5f5;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="-50" y="320" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cDQWvAKaizP4YNDI834v-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cDQWvAKaizP4YNDI834v-6" target="cDQWvAKaizP4YNDI834v-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cDQWvAKaizP4YNDI834v-6" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;LoginHanlder&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;(检测是否登录成功)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="110" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cDQWvAKaizP4YNDI834v-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cDQWvAKaizP4YNDI834v-7" target="cDQWvAKaizP4YNDI834v-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cDQWvAKaizP4YNDI834v-7" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ParameterHandler&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;(检测Post传参是否正确)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="310" y="190" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cDQWvAKaizP4YNDI834v-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cDQWvAKaizP4YNDI834v-8" target="cDQWvAKaizP4YNDI834v-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cDQWvAKaizP4YNDI834v-8" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;PermissionHandler&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;(检测该用户Request注明的权限是否符合)&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="500" y="190" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cDQWvAKaizP4YNDI834v-13" value="Mapper层&lt;div&gt;调用数据库CRUD&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="495" y="585" width="140" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="cDQWvAKaizP4YNDI834v-16" value="&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Handler接口&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;1.boolean hanlderRequest&lt;/div&gt;&lt;div&gt;2.void nextHandler&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="110" y="30" width="530" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cDQWvAKaizP4YNDI834v-21" value="&lt;b&gt;实&lt;/b&gt;&lt;div&gt;&lt;b&gt;现&lt;/b&gt;&lt;/div&gt;" style="shape=singleArrow;direction=north;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="90" width="60" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="cDQWvAKaizP4YNDI834v-22" value="&lt;b&gt;实&lt;/b&gt;&lt;div&gt;&lt;b&gt;现&lt;/b&gt;&lt;/div&gt;" style="shape=singleArrow;direction=north;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="345" y="90" width="60" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="cDQWvAKaizP4YNDI834v-23" value="&lt;b&gt;实&lt;/b&gt;&lt;div&gt;&lt;b&gt;现&lt;/b&gt;&lt;/div&gt;" style="shape=singleArrow;direction=north;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="535" y="90" width="60" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="cDQWvAKaizP4YNDI834v-24" value="&lt;b&gt;测试用POST:&lt;/b&gt;&lt;div&gt;&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &quot;loggedIn&quot;: true,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &quot;hasPermission&quot;: true,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &quot;valid&quot;: true&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="70" y="460" width="350" height="240" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

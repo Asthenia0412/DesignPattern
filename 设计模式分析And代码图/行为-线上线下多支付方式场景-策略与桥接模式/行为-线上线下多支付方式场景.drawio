@@ -1,0 +1,63 @@
+<mxfile host="Electron" modified="2024-11-21T15:53:27.838Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.4 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="IxXxwfJbhL_SGv_y9JO1" version="24.6.4" type="device">
+  <diagram name="第 1 页" id="DHe4XS_Uou6jMMC9mmh6">
+    <mxGraphModel dx="2978" dy="965" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="81FnYb8p8mPg7W0-Cjsu-1" value="业务需求：&lt;div&gt;1.用户可选择线上支付(Online)和线下支付(Offline)&lt;/div&gt;&lt;div&gt;2.无论选择何种支付渠道,都只能通过微信(wechat),支付宝(Alipay),信用卡(credit_Card)支付&lt;/div&gt;&lt;div&gt;传统If-else的问题：&lt;/div&gt;&lt;div&gt;1.维护困难,如果线上支付要添加苹果支付,Visa卡的支付途径,那线下支付的代码也得增加.产生了代码的冗余&lt;/div&gt;&lt;div&gt;2.If-Else的耦合过强,我们希望将其拆分成若干个接口+实现类,通过Spring提供的依赖注入来灵活的调用,实现解耦合&lt;/div&gt;" style="whiteSpace=wrap;html=1;align=left;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-1150" width="410" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="81FnYb8p8mPg7W0-Cjsu-2" value="1.桥接模式的实现：&lt;div&gt;线上支付与三种具体支付渠道桥接&lt;/div&gt;&lt;div&gt;线下支付与三种具体支付渠道桥接&lt;/div&gt;&lt;div&gt;2.策略模式的实现：&lt;/div&gt;&lt;div&gt;根据前端的Restful请求的参数,确定导向哪一个策略实现类,执行具体逻辑&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;" vertex="1" parent="1">
+          <mxGeometry x="-740" width="400" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="81FnYb8p8mPg7W0-Cjsu-3" value="&lt;b&gt;PaymentStrategy&lt;/b&gt;(策略接口)&lt;div&gt;&lt;div&gt;void pay(double amount)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="-1330" y="260" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="81FnYb8p8mPg7W0-Cjsu-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="81FnYb8p8mPg7W0-Cjsu-4" target="81FnYb8p8mPg7W0-Cjsu-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="81FnYb8p8mPg7W0-Cjsu-4" value="AlipayPayment" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="-1080" y="190" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="81FnYb8p8mPg7W0-Cjsu-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="81FnYb8p8mPg7W0-Cjsu-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-1130" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="81FnYb8p8mPg7W0-Cjsu-5" value="CreditCardPayment" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="-1080" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="81FnYb8p8mPg7W0-Cjsu-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="81FnYb8p8mPg7W0-Cjsu-6" target="81FnYb8p8mPg7W0-Cjsu-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="81FnYb8p8mPg7W0-Cjsu-6" value="WeChatPayment" style="whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="-1080" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="81FnYb8p8mPg7W0-Cjsu-13" value="实现" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="-1140" y="275" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="81FnYb8p8mPg7W0-Cjsu-16" value="&lt;div&gt;&lt;b&gt;OrderProcessor(桥接接口)&lt;/b&gt;&lt;/div&gt;&lt;div&gt;void processOrder(double amount);//具体要支付的数额,来自RestFul请求&lt;/div&gt;&lt;div&gt;void setPaymentStrategy(PaymentStrategy paymentStrategy)/把具体策略注入到线上or线下桥接类&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="-400" y="235" width="320" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="81FnYb8p8mPg7W0-Cjsu-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="81FnYb8p8mPg7W0-Cjsu-17" target="81FnYb8p8mPg7W0-Cjsu-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="81FnYb8p8mPg7W0-Cjsu-17" value="OfflineOrderProcessor" style="whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="-560" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="81FnYb8p8mPg7W0-Cjsu-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="81FnYb8p8mPg7W0-Cjsu-20" target="81FnYb8p8mPg7W0-Cjsu-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="81FnYb8p8mPg7W0-Cjsu-20" value="OnlineOrderProcessor" style="whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="-560" y="320" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="81FnYb8p8mPg7W0-Cjsu-25" value="实现" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=#6c8ebf;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="-460" y="275" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="81FnYb8p8mPg7W0-Cjsu-27" value="&lt;b&gt;OrderService(类)：&lt;/b&gt;&lt;div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;Map&amp;lt;String, OrderProcessor&amp;gt; orderProcessorMap;//key存前端传的订单类型(eg.Online) value存对应的桥接处理器&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;choosePaymentStrategy(String paymentMethod)//使用switch根据你的paymentMethod选用具体的策略&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;processOrder(String orderType, String paymentMethod, double amount)&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;//根据你传入的orderType为你选择线上还是线下&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;//根据choosePaymentStrategy取到具体策略&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;//将策略注入到桥接处理器中&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;b&gt;//通过桥接处理器支付订单(注意：我们实际上是在桥接处理器中通过注入的支付策略来支付这个amount.)&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;font-weight: bold;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="-940" y="170" width="360" height="290" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
