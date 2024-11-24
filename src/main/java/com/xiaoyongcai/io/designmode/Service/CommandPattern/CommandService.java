@@ -10,27 +10,20 @@ import org.springframework.stereotype.Service;
 @Service
 public class CommandService {
 
-    @Autowired
-    private PublishNoteCommand publishNoteCommand;
 
-    @Autowired
-    private LikeCommand likeCommand;
-
-    @Autowired
-    private CommentCommand commentCommand;
 
     public void executePublishNoteCommand(PublishNoteRequest request, PublishNoteResponse response) {
-        publishNoteCommand = new PublishNoteCommand(request,response);
+        PublishNoteCommand publishNoteCommand = new PublishNoteCommand(request,response);
         publishNoteCommand.execute();
     }
 
     public void executeLikeCommand(LikeRequest request, LikeResponse response) {
-        likeCommand = new LikeCommand(request,response);
+        LikeCommand likeCommand = new LikeCommand(request,response);
         likeCommand.execute();
     }
 
     public void executeCommentCommand(CommentRequest request, CommentResponse response) {
-        commentCommand = new CommentCommand(request,response);
+        CommentCommand commentCommand = new CommentCommand(request,response);
         commentCommand.execute();
     }
 }

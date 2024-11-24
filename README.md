@@ -1,3 +1,18 @@
+# 食用方式
+
+## 1.项目的部署
+
+- 使用IDEA的Clone功能将该仓库导入你的本地环境
+- 或者：你可以选择`git clone https://github.com/Asthenia0412/DesignPattern.git`
+- 该项目使用了经典的三层架构：即Controller->Service->Mapper。但为了测试和部署方便，我没有设计具体的Mapper层，而是直接采取日志进行输出。如果你有需要，可以自行在Pojo中设计对应的DO
+
+## 2.项目的测试
+
+- 这里我们以2024/11/24日更新的版本为例：
+  - 你可以关注到：SRC下的分包为`Controller` `Service` `Pojo` 以及单独为责任链模式准备的`Hanlder`。除去责任链模式存在`Handler`以外,其他的设计模式的代码都均匀的以`模式名`存在于上述三个分包内。
+  - 你需要在`Controller`层找到你想测试和学习的设计模式的具体Controller,通过访问其暴露的接口进行测试
+  - 在测试成功后，你可以在Service和Pojo包下通过与`Controller`包下设计模式名一致的包快速找到该设计模式对应的Service和Pojo代码
+
 # 更新日志
 
 ## 2024/11/21

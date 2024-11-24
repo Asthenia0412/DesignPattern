@@ -5,7 +5,6 @@ import com.xiaoyongcai.io.designmode.pojo.CommandPattern.CommentRequest;
 import com.xiaoyongcai.io.designmode.pojo.CommandPattern.CommentResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-@Service
 public class CommentCommand implements Command {
     private final CommentRequest request;
     private final CommentResponse response;

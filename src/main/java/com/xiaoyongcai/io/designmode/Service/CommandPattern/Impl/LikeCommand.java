@@ -6,7 +6,6 @@ import com.xiaoyongcai.io.designmode.pojo.CommandPattern.LikeResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-@Service
 public class LikeCommand implements Command {
 
     // 删除构造函数中的 LikeRequest 和 LikeResponse 参数
@@ -14,7 +13,6 @@ public class LikeCommand implements Command {
     private final LikeResponse response;
 
     // 使用 @Autowired 注解让 Spring 自动注入 LikeRequest 和 LikeResponse
-    @Autowired
     public LikeCommand(LikeRequest request, LikeResponse response) {
         this.request = request;
         this.response = response;

@@ -5,7 +5,6 @@ import com.xiaoyongcai.io.designmode.pojo.CommandPattern.PublishNoteRequest;
 import com.xiaoyongcai.io.designmode.pojo.CommandPattern.PublishNoteResponse;
 import org.springframework.stereotype.Service;
 
-@Service
 public class PublishNoteCommand implements Command {
     private final PublishNoteRequest request;
     private final PublishNoteResponse response;
